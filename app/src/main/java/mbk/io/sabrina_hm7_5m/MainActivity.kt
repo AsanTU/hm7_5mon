@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         binding =ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnSearch.setOnClickListener {
+        binding.btnSearch.setOnClickListener  {
             RetrofitService().api.getWeather(binding.etSearch.text.toString())
                 .enqueue(object : Callback<WeatherModel> {
                     @SuppressLint("SetTextI18n")
